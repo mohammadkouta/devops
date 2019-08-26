@@ -1,0 +1,89 @@
+what is Devops?
+	abel devops keno yst3mlo watefall model (in the waterfall there are the
+	   requirement and analysis => plan => design => build => testing => deploy => maitenance).
+	   the disadvantige of the waterfall is to go back and change something.
+ 	Now the agile methodology is a practice that pro,otes continuous iteration 
+           of development and testing throught the software development life cycle of the project.
+	   first of all in the agile method we get the feedback from the previous iteration then we
+	   design the application then we develop the application this is called one iteration and there
+	   are many iteration of this continuously.
+	   so in agile method each project is broken up into several iteration and each iteration should be
+	   of the same time duration (2 to 8 weeks) at the end of each iteration a working product should be delivered.
+	So as we can see that the waterfall is pretty straight there is no circle or go back but in the agile method
+	   the design and building part is happening continously 
+           (analyse => plan => design => build => deploy =>btrj3 bt3ml nfs iteration). 
+				\\	//
+				   test
+	   there is a lot of conflicts happening between the develop and the operation.
+	   the dev team wants the agility where the ops team want stability . 
+	   that the code works fine at the developpers laptop but when it reaches to production there is some bug 
+	   in the application or it does not work any production at all.
+	So the solution is in the DEVOPS ,is characterized by the operation staff making use many of the same 
+	   techniques as developpers for their system. so devop is a software development strategy wich bridges the gap
+	   between the dev part in the upside of the company and help us to deliver good quality software in time.
+	plan       deploy
+	||     \\//  ||
+	code    //   
+	||     //\\  operate
+	build //  \\ ||
+	||   //    \\
+	test//      \\monitor
+	
+	and here is the devops stages:
+	1)version control : maintaing diffrent version of the code(source code managment).
+	2)continuous integration : compile, validate, code review, unit testing, integration testing(continuous build).
+	3)continuous delivery : deploying the build application to test servers (continuous testing).
+	4)continuous deploying : deploying the tested application on the prod server for release (configuration managment and containerization).
+	and once the application is live it is continuously monitored by tools like nagi os or splunk wich will provide
+	the feedback to the concern teams.
+	So jenkins is basically heart of devops life cycle. it gives you a nice 360 degree view of your entire software 
+	delivery life cycle.
+	
+	1)in version control there is 2 version:  
+	.)centralized version control :  uses a central server to store all the files and enables team collaboration
+	    it works in a single repository to wich users can directly  access a central server,
+	    every programmer can extract or update their workstation or the data present in the reposetry or can even 
+	    make changes to the data or commited in the repository.
+	    every operation is performed directly on the central server of the central repository,
+	    advantages: if anyone makes a comment in the repository thenit will be a commit ID associated to it
+	     and there will always be a commit message, so you will know wich person has made that commit and what time
+	     and where in the code basically so you can always revert back.
+	    disadvanteges: it is not locally available so it always need internet to perform any action so in case of
+	     the central server getting crash or corrupted it will result in losing the entire data of the project.
+	.)Distributed version control : each developer has a copy to drive or in the hard disck  of the repository
+	     they can commit and update the local reposiroty without any interference .they can update the local 
+	     repository with new data coming from the central server by an operation called pull and effect changes 
+	     in the main repository by an operation called push write operation called push from the local repository 
+	     the act of cloning an entire reposiroty gives you that advantage 
+	     all the operation apart from push and pull are very fast beacause the tool only needs to access 
+             the hard drive not a remote server hence you dont need always need an internet connection comminting new
+	     change sets can be done locally without manipulatig the data on the main proposed tree .
+ 	     once you have a group of change sets ready you can push them all at once so you can ask the commit to your
+	     local repository wich is there your local hard drive you can commit the changes once its ready you can
+	     push it onto the central server and when the central server gets crashed the lost data can be easily
+	     recovered from any one of the contributors local repository .
+	Git
+	git is a distributed version control tool , working directory ==git add==> staging area ==git commit==>
+	local repo ==git push==> remote repo ==git pull==> local repo ==git checkout==> working directory
+								      ==git merge==> working directory
+	git init: initialized empty git repository 
+	touch file.py : create a python file
+	git status : tells me wich changes needs to be commited
+	git commit -m "first commit" //hon 3am nhota 3al local repositry
+	git remote addorigin "link from the new repository created in github"
+	git pull origin master
+	git push origin master
+	
+	2)Continuous integration:
+		there are several developpers commiting code to a shared repository to the jenkins server
+		and then building not only mean compiling the source code it includes compiling and code revire unit test 
+		integration testing and packaging 
+	3)continuous delivery:
+		its nothing but taking Continuous integration to the next step thats means we are taking this build application
+		onto the test server for end user testing or unit of user acceptance test
+	4)continuous deploying :
+		its basically taking the build application that we have tested and deployin that onto the process servers
+		for release in an automated fashion
+
+	Configuration managment 
+		is when i work an some version and a have a dependencies issues when deploying  
